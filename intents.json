@@ -1,0 +1,601 @@
+{
+    "intents": [{
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "Good day"
+            ],
+            "responses": [
+                "Hey there! Welcome to Re-Fem. Feel free to ask questions or select one of the suggestions below.",
+                "Hello! Thanks for reaching out to Re-Fem. Please ask a question or select one from the suggestions below.",
+                "Hi there, welcome to Re-Fem. How can we assist you today?. Feel free to ask a question or select one of the suggestions below.",
+                "Hi! Welcome to Re-Fem. How can we support you? Ask a question or select one suggestion below.",
+                "Hello! Welcome to Re-Fem. How may we help you today? Feel free to ask a question or select one from the suggestions below."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later", "Goodbye"],
+            "responses": [
+                "See you later, thanks for visiting",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+            "responses": ["Happy to help!", "Any time!", "My pleasure"],
+            "predefined_question": null
+        },
+        {
+            "tag": "information_resources",
+            "patterns": [
+                "Where can I find local resources?",
+                "What organizations can help me?",
+                "How can I get support?",
+                "What assistance is available in my area?",
+                "What assistance is available online?",
+                "Which organisations are there?",
+                "Where can I seek help?",
+                "How to find information?"
+            ],
+            "responses": [
+                "You can find local resources at <a href='https://mrsn.org.uk/welfare-advice-service/'>Manchester Refugee Support Network</a>, <a href='https://www.refugeewomen.co.uk/i-need-support/'>Women For Refugee Women</a>, and <a href='https://www.refugeewomenconnect.org.uk/get-support-for-me'>Refugee Women Connect</a>.",
+                "Several organizations offer assistance, including <a href='https://www.refugeewomen.co.uk/i-need-support/'>Women For Refugee Women</a> and <a href='https://www.refugeewomenconnect.org.uk/get-support-for-me'>Refugee Women Connect</a>.",
+                "Support is available through various organizations such as <a href='https://www.refugeewomenconnect.org.uk/get-support-for-me'>Refugee Women Connect</a> and <a href='https://www.refugeewomen.co.uk/i-need-support/'>Women For Refugee Women</a>.",
+                "Local resources are accessible through <a href='https://mrsn.org.uk/welfare-advice-service/'>Manchester Refugee Support Network</a>, <a href='https://www.refugeewomen.co.uk/i-need-support/'>Women for Refugee Women</a>, and <a href='https://manchester.cityofsanctuary.org/'>Manchester City of Sanctuary</a>.",
+                "Numerous organizations in your area provide support, including <a href='https://manchester.cityofsanctuary.org/'>Manchester City of Sanctuary</a> and <a href='https://mrsn.org.uk/welfare-advice-service/'>Manchester Refugee Support Network</a>.",
+                "You can seek help from <a href='https://www.refugeewomen.co.uk/i-need-support/'>Women For Women Refugee</a>, <a href='https://www.refugeewomenconnect.org.uk/get-support-for-me'>Refugee Women Connect</a>, and other local organizations.",
+                "Various community organizations offer assistance, such as <a href='https://www.refugeewomenconnect.org.uk/get-support-for-me'>Refugee Women Connect</a> and <a href='https://www.refugeewomen.co.uk/i-need-support/'>Women For Refugee Women</a>."
+            ],
+            "predefined_question": "Where can I find local resources?"
+        },
+        {
+            "tag": "education",
+            "patterns": [
+                "How can I access education opportunities?",
+                "Where do I start learning?",
+                "Are there free online courses?",
+                "What resources are available for learning?",
+                "Where can I find educational programs?",
+                "Which organisations offer learning opportunities?"
+            ],
+            "responses": [
+                "Start learning by checking out resources at <a href ='https://gmesol.org/community-organisations-and-training-providers/'>ESOL Courses in Manchester</a>",
+                "There are free online courses available at <a href = 'https://www.esolcourses.com/'>ESOL Courses Online</a> and <a href= 'https://mrsn.org.uk/learn-english-online/'>MRSN - Learn English Online</a>"
+            ],
+            "predefined_question": "How can I access education opportunities?"
+        },
+
+        {
+            "tag": "legal_aid",
+            "patterns": [
+                "I need legal advice.",
+                "Where can I find assistance with immigration?",
+                "Are there free legal clinics?",
+                "I need a lawyer. Can you help?"
+
+            ],
+            "responses": [
+                "If you are in England or Wales, you can contact Civil Legal Advice by telephone. An advisor can assess whether you are eligible for legal aid (free legal advice) and then find local asylum/immigration lawyers near you. You can contact them on 0345 345 4 345 between 09:00 and 20:00 Monday to Friday; and 09:00 and 12:30 on Saturdays.",
+                "The Home Office has a search tool to find a Legal Aid adviser in England and Wales which you can access <a href = 'https://find-legal-advice.justice.gov.uk/'>here</a>. You can use the tool to look for lawyers near you.",
+                "You can find free advice via the websites: <a href = 'https://www.citizensadvice.org.uk/immigration/asylum-and-refugees/'>Citizens Advice</a> and <a href = 'https://www.praxis.org.uk/get-help'>Praxis</a> ",
+                "Unfortunately, we cannot give legal assistance, but we can guide you on how to find a lawyer. The Home Office has a search tool to find a Legal Aid adviser in England and Wales which you can access <a href = 'https://find-legal-advice.justice.gov.uk/'>here</a>. You can use the tool to look for lawyers near you.",
+                "You can find a pro bono charity and apply, example: <a href = 'https://weareadvocate.org.uk/apply-for-help.html'>Advocate</a>"
+            ],
+            "predefined_question": "I need legal advice."
+        },
+
+
+        {
+            "tag": "refugee_status",
+            "patterns": [
+                "What are the steps to claim refugee status?",
+                "What is the process for asylum seeking?",
+                "Claiming Refugee Status"
+            ],
+            "responses": [
+                "Please, follow this link to find information on how to <a href='/steps'>Claim Refugee Status</a>"
+            ],
+            "predefined_question": "Claiming Refugee Status"
+        },
+        {
+            "tag": "employment",
+            "patterns": [
+                "How can I find job opportunities?",
+                "Are there job training programs?",
+                "What organisations offer employment assistance?"
+            ],
+            "responses": [
+                "Learn about job opportunities and training through the following organisations: <a href='https://www.refugeecouncil.org.uk/service-category/employment/'>Refugee Council</a>, <a href = 'https://www.step.worldjewishrelief.org/videos'> STEP Program</a> and <a href = 'https://breaking-barriers.co.uk/refugee-support/apply-for-support/'>Breaking Barriers</a>",
+                "Explore job training programs offered by <a href='https://www.refugeecouncil.org.uk/service-category/employment/'>Refugee Council</a>, and <a href='https://www.step.worldjewishrelief.org/videos'> STEP Program </a> and <a href ='https://breaking-barriers.co.uk/refugee-support/apply-for-support/'> Breaking Barriers</a>.",
+                "You can search for job opportunities through online job boards, employment agencies, or government programs like the UK Government's <a href ='https://www.gov.uk/find-a-job'>Find a Job</a>.",
+                "Organisations like <a href ='https://www.refugeecouncil.org.uk/our-work/helping-refugees-to-rebuild-lives/supporting-refugees-into-employment/'>Refugee Council</a> offers employment tailored for refugees "
+            ],
+            "predefined_question": "How can I find job opportunities?"
+        },
+
+        {
+            "tag": "employment-2",
+            "patterns": [
+                "What steps do I need to take to apply for a job in the UK?",
+                "What are the steps to apply for a job?"
+
+            ],
+            "responses": [
+                "To apply for a job in the UK, you need to submit an application, which can be in the form of an application form, CV (Curriculum Vitae) and a covering letter. Once your application is submitted you may be invited for an interview.   "
+            ],
+            "predefined_question": "How can I find job opportunities?"
+        },
+
+        {
+            "tag": "employment-3",
+            "patterns": [
+                "How can I find a job?",
+                "How can I get help finding jobs?",
+                "Where can I get help to find jobs?"
+
+            ],
+            "responses": [
+                "There are various ways to find a job, this include: Visiting your JobCentre Plus, Look in local newspapers and recruitments websites, Register with a rectruitment agency or Visit local companies to enquire",
+                "You can visit your JobCentre Plus, they can try to find jobs or direct you to training to help you get a job"
+
+            ],
+            "predefined_question": "How can I find job opportunities?"
+        },
+
+
+        {
+            "tag": "family_reunification",
+            "patterns": [
+                "How can I reunite with my family members who are still abroad?",
+                "What are the procedures for family reunification?",
+                "How can I reunite my family members?"
+            ],
+            "responses": [
+                "If you are married or have a partner and/or a child under the age of 18, The leave you have been granted entitles your partner and minor children’s to join you in the UK.",
+                "Family reunification for refugees in the UK is facilitated through the Family Reunion visa scheme. You can apply for family reunion through the UK Government's official website or seek assistance from organizations specializing in refugee family reunification."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "traveling_as_refugee",
+            "patterns": [
+                "Can I travel outside the UK as a refugee?"
+            ],
+            "responses": [
+                "You need to apply to the Home Office for a travel document. If they accept, you can travel outside the UK, however you should not travel to your country of origin and/or the country you sought refugee."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "bank_account",
+            "patterns": [
+                "Can I open a bank account?",
+                "How to open a bank account?"
+            ],
+            "responses": [
+                "As a refugee you can open a bank account and it is important to open a bank account to keep your money safe and to enable you to receive payments. There are a range of banks you can choose that suits you best, including online.",
+                "In order to open a bank account you will need to show a form of identification (e.g. passport or BRP) as well as a proof of address (e.g. tenancy agreement, gas, electric or phone bill)"
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "english_learning",
+            "patterns": [
+                "How can I learn English?"
+            ],
+            "responses": [
+                "Learning English is a very important step to help you settle in the UK. You are entitled for free English language tuition if you are unemployed and looking for jobs. You can contacr your <a href = 'https://www.gov.uk/find-local-council'>local council</a> for more info",
+                "You can find information about English classes by contacting your <a href = 'https://www.gov.uk/find-local-council'>local council</a>."
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "higher_education",
+            "patterns": [
+                "How do I apply for higher education?",
+                "How do I apply for university",
+                "Can I apply to university?"
+            ],
+            "responses": [
+                "To apply for university in the UK as a refugee, you can follow the same application process as other students. You will need to research universities and courses, submit your application through <a href = 'https://www.ucas.com/' UCAS </a> and meet the specific entry requirements.",
+                "You have the right to study in an university as a refugee woman. Follow this link to <a href = 'https://www.ucas.com/' UCAS</a> to find more information."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "healthcare",
+            "patterns": [
+                "What is a GP?",
+                "What are GP services?"
+
+            ],
+            "responses": [
+                "A general practitioner (GP) is the first doctor you will usually visit when accessing healthcare in the UK. You should visit a GP if it’s not an emergency but you still need to see a doctor about your health."
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "healthcare_2",
+            "patterns": [
+                "What is NHS?"
+
+            ],
+            "responses": [
+                "As a refugee, you are entitled to access the health services provided by NHS. You can access GPs, Hospitals, Maternity service for free in the UK."
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "healthcare_4",
+            "patterns": [
+                "How do I register with a GP?"
+            ],
+            "responses": [
+                "You will need to register to a GP as soon as possible. To register you will need to hive your name, address, date of birth, address and telephone number. GPs may ask to see proof of identity such as your BRP or passport."
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "healthcare_5",
+            "patterns": [
+                "How do I make an appointment?",
+                "How do I make a GP appointment?"
+
+            ],
+            "responses": [
+                "To see a GP or nurse, you must make an appointment in person, or by telephone, or online. You may need to wait a few days for non-urgency appointments."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "healthcare_6",
+            "patterns": [
+                "How do I access a GP if I don’t speak English?"
+            ],
+            "responses": [
+                "If you don't speak English and need an interpreter, you must tell the receptionist when making the appointment. Tell them which language will speak, and they will book an interpreter for you or get an interpreter on the phone."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "benefits_assistance",
+            "patterns": [
+                "What benefits can I get?",
+                "Are there any financial assistance for refugees?"
+            ],
+            "responses": [
+                "As a refugee in the UK, you may be eligible for various benefits and support services, including housing assistance, financial support, healthcare through NHS, education for your children and access to legal aid. You can contact your <a href = 'https://www.gov.uk/find-local-council'>local council </a>for more information.",
+                "There are financial assistance programs available for refugee in the UK. You can get £49.18 weekly whilst applying for refugee. Once you been granted refugee status you can get benefits like Universal Credit, Child Benefit, and Housing benefit. "
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "benefits_assistance2",
+            "patterns": [
+                "How do I apply for benefits?",
+                "How can I get benefits?"
+            ],
+            "responses": [
+                "You can contact your <a href = 'https://www.citizensadvice.org.uk/about-us/contact-us/nearby/'>Local Citizens Advice</a> for guidance on how to apply and find out if you are eligible"
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "workplace_rights",
+            "patterns": [
+                "What are my rights in the workplace as a refugee?",
+                "How much should I get paid?",
+                "What should I do if I have been unfairly discriminated at work?"
+            ],
+            "responses": [
+                "You have the right to be treated fairly and work in a safe environment. You also have the right to be able to work without fear of harassment from your employer, colleagues and customers.",
+                "Every employer in the country must pay their employees a minimum amount per hours. How much it is depends on how old you are. The current wage is: £11.44 for 21 and over, and £8.60 if you are 18-20 years old.",
+                "If you think you have been unfairly discriminated, you should complain direct to the person or organisation, use someone else to help you to sort it out(called mediation or alternative dispute resolution) or make a claim in a court of tribunal. Get further advice and support from the <a href='https://www.equalityadvisoryservice.com/'>Equality Advisory Service</a>"
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "housing_1",
+            "patterns": [
+                "What is the difference between privately rented housing and social housing?"
+            ],
+            "responses": [
+                "Privately rented housing involves direct agreements with landlords, while social housing is provided by <a href = 'https://www.gov.uk/find-local-council'>local councils </a> and housing associations based on eligibility criteria and waiting lists."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "housing_2",
+            "patterns": [
+                "What are the steps to private rent?"
+            ],
+            "responses": [
+                "The steps to find private rented housing is: Search for available properties via local letting or online property listing, arrange viewings, complete the application forms, the landlords may conduct reference checks, pay a deposit once the application is accepted, sign the tab by agreement and move in."
+            ],
+
+            "predefined_question": null
+        },
+
+        {
+            "tag": "housing_3",
+            "patterns": [
+                "How do I apply for social housing?",
+                "Where can I get help with housing?"
+            ],
+            "responses": [
+                "You can apply for social housing to the local council where you wish to live, usually by filling out an application form and meeting eligibility criteria, this will potentially involve a waiting list.",
+                "You can get help with housing from local councils or housing associations. They can provide information about renting, finding accommodation, and financial support."
+            ],
+
+            "predefined_question": null
+        },
+        {
+            "tag": "housing_4",
+            "patterns": [
+                "What else do I have to pay besides rent ?"
+            ],
+            "responses": [
+                "Besides from paying the rent, which is typically monthly, you will need to pay for your water and electricity. This can be quite expensive so doing things like turning the heating off when you leave the house or keep windows closed when the heating is on can save you money."
+            ],
+
+            "predefined_question": null
+        },
+        {
+            "tag": "housing_5",
+            "patterns": [
+                "What is council tax?"
+            ],
+            "responses": [
+                "Council tax is a tax that goes to your local authority for local services such as care, social services, police and local facilities. You are liable for paying council tax for your property, this is a set amount for the financial year."
+            ],
+
+            "predefined_question": null
+        },
+        {
+            "tag": "housing_6",
+            "patterns": [
+                "What is available in my neighbourhood?"
+            ],
+            "responses": [
+                "Your local area will likely have a leisure centre where you can play sport or exercise, local parks and libraries where you can borrow books or access the internet."
+            ],
+
+            "predefined_question": null
+        },
+        {
+            "tag": "children_education",
+            "patterns": [
+                "How can my child join school?",
+                "How can my child join nursery?"
+            ],
+            "responses": [
+                "You should get in touch with your local authorities to ensure your children are registered in school. We recommend you review this <a href='https://www.gov.uk/find-local-council'>GOV.UK</a> webpage",
+                "If you have a child of nursery age (under 5) the local authority Family Information Service can help you find a local nursery to place them and advice how many hours of free early education you may have."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "adult_education",
+            "patterns": [
+                "What is adult learning?",
+                "How do I find adult learning opportunities?"
+            ],
+            "responses": [
+                "Adult learning refers to education opportunities for adults, this is usually offered by colleges, adult education services, or other institutions. These include a range of courses, workshops and online training covering various subjects.",
+                "To find adult learning opportunities, you can check your local authority education service, visit the national careers service website, look for notices in local newspapers or communities centres, libraries, etc."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "domestic_abuse",
+            "patterns": [
+                "What is domestic abuse?",
+                "What are the emergency contact numbers provided for domestic violence?"
+            ],
+            "responses": [
+                "Domestic abuse usually occurs in the house and can take many forms such as physical abuse, emotional abuse, controlling actions, coercive behaviour or sexual assault, regardless of gender, nationality, or relationship status.",
+                "The emergency numbers helpline are: 999 for police, ambulance and fire brigade, call 0808 2000 247 for National Domestic Violence helpline, call 0300 999 5428 Broken Rainbow National LGBT domestic abuse helpline."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "mental_health",
+            "patterns": [
+                "What are some mental health helplines?"
+            ],
+            "responses": [
+                "Help is available from the <a href='https://www.samaritans.org/how-we-can-help/'>Samaritans</a> You can also call them on 116 123 or email at jo@samaritans.org. ",
+                "Help is available at: <a href='https://migrant.health/'>Migrant Health</a>, <a href='https://www.mind.org.uk'>Mind</a>, <a href='https://priorygroup.com'Priory Group</a>, <a href='https://psychiatry-uk.com'>Psychiatry – UK</a>, <a href ='https://refugeecouncil.org.uk'>Refugee Council</a>"
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "emergency_numbers",
+            "patterns": [
+                "What is the emergency helpline numbers in the UK?",
+                "UK Emergency Numbers"
+            ],
+            "responses": [
+                "In the UK, the main emergency contact number is 999. For non-emergency police contact, you can dial 101. If you require medical assistance but it's not an emergency, you can call NHS on 111. For mental health support, you can contact the Mental Health and Support Line at 0800 138 0990."
+            ],
+            "predefined_question": "UK Emergency Numbers"
+        },
+
+        {
+            "tag": "mental_health_support",
+            "patterns": [
+                "Do you offer therapy or counselling?",
+                "Can you provide information on how to access mental health support?"
+            ],
+            "responses": [
+                "While we don’t offer therapy or counselling directly, there are organisations and healthcare that specialize in mental health support for refugees, such as the <a href ='https://www.refugeecouncil.org.uk/our-work/mental-health-support-for-refugees-and-people-seeking-asylum/#:~:text=With%20almost%2020%20years%20experience,UK%20are%20often%20deeply%20traumatised.'>Refugee Council</a>",
+                "You can contact your local GP to discuss your mental health needs and get referrals to appropriate services."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "rights_legal_assistance",
+            "patterns": [
+                "What are my rights as a refugee in the UK?",
+                "What are my rights in the UK?"
+            ],
+            "responses": [
+                "As a refugee in the UK, you have various rights protected by law, including the right to seek asylum, the right to work (after a certain period), access to healthcare and education, protection from discrimination and violence, and the right to family reunification. These rights are protected under international law.",
+                "Every person has a right to liberty, meaning you cannot be unlawfully detaibed. Freedom of thought and the right to practice your religion. Everyone has a right to marry whomever they want, regardless of race or religion."
+            ],
+            "predefined_question": null
+        },
+
+
+        {
+            "tag": "transportation",
+            "patterns": [
+                "Can you provide information on public transport?"
+            ],
+            "responses": [
+                "Transportation services in the UK include public transportation such as buses, trains, and trams. You can find information on routes, schedules, and fares for public transport on the websites of transport operators or through mobile apps."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "community_engagement_1",
+            "patterns": [
+                "How can I get involved in my community and social events?",
+                "Where can I find group support for refugee women?"
+            ],
+            "responses": [
+                "You can get involved in your community and social events by joining local community groups, volunteering with charities, or attending events organized by cultural or religious associations. You can check online platforms or social media groups for information on upcoming events in your area. Example platforms include <a href ='https://refugeeweek.org.uk/events/'> Refugee Week</a> or <a href='https://www.refugeewomen.co.uk/news/events/'>Women for Refugee Women </a>",
+                "There are many support groups online such as Women for <a href ='https://www.refugeewomen.co.uk/i-need-support/'>Women for Refugee Women </a> and <a href='https://www.refugee-action.org.uk/'>Refugee Action</a>"
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "community_engagement_2",
+            "patterns": [
+                "Can you recommend books, podcasts, or other resources that focus on refugee women empowerment?",
+                "Can you recommend books about refugee women empowerment?",
+                "Can you recommend podcasts about refugee women empowerment?"
+
+            ],
+            "responses": [
+                "There are many resources available that focus on refugee women empowerment. Books like 'The Girl Who Smiled Beads' by Clemantine Wamariya, podcasts like <a href ='https://refugeeradio.org.uk/podcasts/'>'Refugee Radio Podcast'</a>, and online platforms like <a href ='https://www.unwomen.org/en'> UN Women</a> offer a wealth of information and stories of empowerment."
+            ]
+        },
+
+        {
+            "tag": "community_engagement_3",
+            "patterns": [
+                "How can I overcome barriers and challenges and pursue my goals?"
+            ],
+            "responses": [
+                "Overcoming barriers and challenges involves resilience, determination, and seeking support when needed. Break your goals into smaller, manageable steps, seek advice and guidance from specialists or support organizations, and cultivate a positive mindset that focuses on possibilities and strengths rather than limitations."
+            ]
+        },
+        {
+            "tag": "language_skills_development",
+            "patterns": [
+                "Where can I find English classes near me?"
+            ],
+            "responses": [
+                "You can find English language classes near you by contacting local community centers, adult education centers, or organizations that provide support to refugees and migrants. You can use government resources such as the ESOL (English for Speakers of Other Languages) <a href ='https://nationalcareers.service.gov.uk/find-a-course/page?searchTerm=esol&distance=10%20miles&town=Macclesfield%20(Cheshire%20East,%20North%20West)&orderByValue=Distance&startDate=Anytime&courseType=&sectors=&learningMethod=&courseHours=&courseStudyTime=&filterA=true&page=1&D=1&coordinates=-2.125538|53.260604&campaignCode=&qualificationLevels='>course finder</a> to locate classes in your area."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "digital_skills_development",
+            "patterns": [
+                "How can I access training or workshops to improve my digital/technological skills?"
+            ],
+            "responses": [
+                "You can access training or workshops to improve digital/technological skills through local community centers, visiting your local library, or online platforms."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "empowerment_1",
+            "patterns": [
+                "How can I build confidence and self-esteem after experiencing displacement?"
+            ],
+            "responses": [
+                "Building confidence and self-esteem after displacement can take time, but there are steps you can take. Consider joining support groups, attending counseling or therapy sessions, setting achievable goals, practicing self-care activities, and celebrating your success no matter how small. Surround yourself with positive influences and focus on your strengths and abilities."
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "empowerment_2",
+            "patterns": [
+                "How can I develop leadership skills as a refugee woman?"
+            ],
+            "responses": [
+                "Developing leadership skills as a refugee woman involves seeking out opportunities for personal and professional growth. You can participate in leadership development programs, volunteer for leadership roles within community organizations, attend workshops or training sessions on leadership, and seek mentorship from established leaders."
+            ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "empowerment_3",
+            "patterns": [
+                "Are there any networking events tailored for refugee women?"
+            ],
+            "responses": [
+                "There are various networking events tailored for refugee women, an example is Refugee Women Connect which aims to connect Refugee women from all over UK. You can check their latest events <a href ='https://www.refugeewomenconnect.org.uk/Pages/Events/Category/events/Tag/events'> here. </a>",
+                "There are opportunities for refugee women to engage in art, sports, or other creative activities as a means of empowerment and community engagement. <a href = 'https://www.refugeewomen.co.uk/our-activities/'>Women for Refugee Women</a> offer different types of activities . Alternatively, you can join local art classes, sports clubs, or community projects that promote creativity and collaboration."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "empowerment_4",
+            "patterns": [
+                "What support is available for refugee women who have experienced gender-based violence?"
+            ],
+            "responses": [
+                "Refugee women who experienced gender-based violence can access support through organizations like <a href ='https://refuge.org.uk/'> Refuge</a> or <a href ='https://mwrc.org.uk/?gad_source=1&gclid=Cj0KCQjwk6SwBhDPARIsAJ59Gwc7J2ULYdZz2GGZfIebXV_LBreeBWgXQqFYN0Of224Xnbt4GaDPrHEaAiOvEALw_wcB'> Women’s Aid </a> which offer confidential advice, refuge accommodation, counseling, and legal support. Additionally, you can contact local authorities or healthcare providers for assistance and referrals to specialized services."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "empowerment_5",
+            "patterns": [
+                "Are there opportunities to engage in art, sports, or other creative activity?"
+            ],
+            "responses": [
+                "There are opportunities for refugee women to engage in art, sports, or other creative activities as a means of empowerment and community engagement. <a href = 'https://www.refugeewomen.co.uk/our-activities/'>Women for Refugee Women</a> offer different types of activities . Alternatively, you can join local art classes, sports clubs, or community projects that promote creativity and collaboration."
+            ],
+            "predefined_question": null
+        },
+        {
+            "tag": "adapt_in_UK",
+            "patterns": [
+                "How can I make friends?",
+                "What should I wear for the UK weather?",
+                "What should I dress in the UK?",
+                "How can I learn about the culture?"
+            ],
+            "responses": [
+                "Making friends in the UK involves joining clubs, attending community events, or volunteering. It's also helpful to strike up conversations with neighbors or coworkers. ",
+                "Dressing in layers and having a waterproof jacket is essential for the UK's unpredictable weather. Comfortable shoes for walking are also a good idea.",
+                "You can learn about UK culture by visiting museums, attending festivals, or joining cultural groups. You can also ask locals about their traditions and customs."
+            ],
+            "predefined_question": null
+        }
+
+
+    ]
+}

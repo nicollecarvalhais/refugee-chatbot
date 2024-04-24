@@ -1,0 +1,597 @@
+* {
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FEF9F1;
+    font-family: "Poppins";
+}
+
+.navbar {
+    background-color: #FDA1A2;
+    padding: 25px 20px;
+    z-index: 9999;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #8e0d3c;
+    font-family: "Poppins";
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #e61a3c;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #FEF9F1;
+}
+
+.logo-container {
+    position: absolute;
+    height: 110px;
+    top: -60px;
+    left: -20px;
+    z-index: 10000;
+}
+
+#logo {
+    width: 215px;
+    height: auto;
+}
+
+video {
+    width: 100%;
+    max-height: 100%;
+    margin-top: 20px;
+    background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center center/cover;
+}
+
+.wrapper {
+    position: relative;
+    float: left;
+    padding: 10px;
+    margin: -10px -100px;
+    width: 600px;
+    height: auto;
+}
+
+.uk-map .location {
+    position: relative;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: right;
+}
+
+.uk-map .location img {
+    width: 80%;
+    height: auto;
+    max-height: none;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.uk-map .location .location-pins {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+}
+
+.uk-map .location .location-pins .pin {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+}
+
+.uk-map .location .location-pins .pin:before {
+    content: '';
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    width: 22px;
+    height: 22px;
+    top: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100% 100% 0 100%;
+    transform: rotate(45deg);
+    background: red;
+}
+
+.uk-map .location .location-pins .pin span {
+    display: none;
+}
+
+.uk-map .location .location-pins .pin:hover:before,
+.uk-map .location .location-pins .pin:focus:before {
+    background: purple;
+}
+
+.uk-map .location .location-pins .pin:hover span,
+.uk-map .location .location-pins .pin:focus span {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    height: auto;
+    background: hotpink;
+    color: black;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.uk-map .location .location-pins .pin.pin-active:before {
+    background: purple;
+}
+
+.uk-map .location .location-pins .pin.pin-one {
+    top: 65.2%;
+    left: 62.9%;
+}
+
+.uk-map .location .location-pins .pin.pin-two {
+    top: 65.5%;
+    left: 51.9%;
+}
+
+.uk-map .location .location-pins .pin.pin-three {
+    top: 37.2%;
+    left: 48.9%;
+}
+
+.uk-map .location .location-pins .pin.pin-four {
+    top: 51.2%;
+    left: 38.9%;
+}
+
+@media (min-width: 768px) {
+    .uk-map .location {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.text-1 {
+    z-index: 40;
+    max-width: fit-content;
+    margin-left: 50%;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.card {
+    background-color: #FEF9F1;
+    border: 1px solid #FDA1A2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #343a40;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.card-horizontal2 {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1 1 auto;
+}
+
+.img-square-wrapper {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.lang {
+    width: 350px;
+    overflow: hidden;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-container h1 {
+    font-size: 32px;
+}
+
+.text-container {
+    margin: 50px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.cards-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Cards */
+
+.card-column {
+    width: 50%;
+    float: left;
+    padding: 4%;
+    box-sizing: border-box;
+}
+
+.column-1 {
+    padding-top: 100px;
+}
+
+.cards {
+    width: 92%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: #EB5160;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    border: 1px solid black;
+    opacity: 0.5;
+    left: -6px;
+    top: -6px;
+}
+
+.cards h1 {
+    position: relative;
+    padding: 200px 0px 100px 200px;
+    width: 90%;
+}
+
+.cards p {
+    margin-top: -100px;
+}
+
+.cards>img {
+    width: 90%;
+    position: absolute;
+    top: -6%;
+    left: -6%;
+}
+
+.card-color-0 {
+    background-color: #EB5160;
+}
+
+.card-color-1 {
+    background-color: #8F3985;
+}
+
+.card-color-2 {
+    background-color: #8DAA91;
+}
+
+.card-color-3 {
+    background-color: #888DA7;
+}
+
+.cover {
+    position: fixed;
+    background: #EB5160;
+    z-index: 100;
+    transform-origin: 50% 50%;
+}
+
+.hours {
+    margin-top: -90px;
+    position: absolute;
+    top: 300px;
+    left: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* CSS for Footer */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+.card-circle {
+    text-align: center;
+    background: pink;
+    border: 10px solid transparent;
+    color: #fff;
+    Font-family: Montserrat;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 6%;
+}
+
+.card-circle .card-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #e61a3c;
+}
+
+.card-circle .card-text {
+    font-weight: 400;
+    padding: 10px;
+    color: black;
+}
+
+.card-circle .card-icon i {
+    font-size: 60px;
+    display: block;
+}
+
+.card-circle:nth-child(2) {
+    background: #FDA1A2;
+    font-size: 20px;
+}
+
+.card-circle .card-icon i,
+.card-circle {
+    transition: all ease-in-out 0.2s;
+}
+
+.card-circle:hover {
+    border: 10px solid #8e0d3c;
+}
+
+.card-circle:hover i {
+    text-shadow: 0px -1px 10px #8e0d3c;
+    transform: scale(1.2)rotate(20deg);
+}
+
+@media only screen and (min-width: 1200px) {
+    .card-circle:nth-child(3) {
+        margin-left: -40px;
+        z-index: 0;
+    }
+    .card-circle {
+        width: 400px;
+        height: 400px;
+    }
+    .card-circle:nth-child(2) {
+        margin-left: -20px;
+        box-shadow: 1px 2px 20px 8px rgba(232, 8, 112, 0.12);
+        transform: scale(1.2);
+        z-index: 1;
+    }
+    .card-circle .card-icon i {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+    .card-circle {
+        width: 340px;
+        height: 340px;
+    }
+    .card-circle .card-icon i {
+        font-size: 50px;
+    }
+    .card-circle .card-icon i {
+        margin-top: -25px;
+    }
+    .card-circle:nth-child(3) {
+        margin-left: -50px;
+        z-index: 0;
+    }
+    .card-circle:nth-child(2) {
+        margin-left: -20px;
+        z-index: 1;
+    }
+}
+
+
+/* CSS for Footer */
+
+footer {
+    width: 100%;
+    background-color: #FDA1A2;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    margin-top: 10%;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 1.5em;
+    color: #e61a3c;
+    opacity: 0, 9;
+}
+
+
+/* Hover affect on social media icon */
+
+.socialIcons a:hover {
+    background-color: #e61a3c;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: #e61a3c;
+    margin: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.0em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+.bold {
+    color: red;
+}
+
+i {
+    color: #8e0d3c;
+}
+
+#uk-time {
+    font-size: 16px;
+}
+
+.small-text {
+    font-style: italic;
+    font-size: 15px;
+}

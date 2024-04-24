@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://db.onlinewebfonts.com/c/ec11ddc9fa834d65ab94debb6af73080?family=Zing+Rust+Base" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/brightwall" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='maps.css') }}">
+    <title>Chatbot</title>
+</head>
+
+ <body>
+
+<!--Nav Bar ul List-->
+<nav class="navbar">
+  <ul class="nav-links">
+      <li><a href="/#">Home</a></li>
+      <li><a href="/near_you">Introduction</a></li>
+      <li><a href="/steps">Claiming Refugee Status</a></li>
+      <li><div id="google_translate_element"></div></li>
+  </ul>
+
+    <!-- Translate page to be positioned on nav bar-->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+          }, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</nav>
+
+<!--Header containing logo and video-->
+<div class="header">
+  <div class="logo-container">
+    <a href = "/#"> <img src="static/images/logo2.png" alt="Animated GIF" id="logo"></a>
+  </div>
+</div>
+
+
+    <!--Class video-container where main page video can be edited-->
+    <section class="showcase">
+      <div class="video-container">
+          <video src="static/images/intro.mp4" autoplay muted loop></video>
+      </div>
+  </section>
+</div>
+
+
+    <div class="container-fluid">
+            <div class="col-12 mt-3">
+                <div class="card">
+                    <div class="card-horizontal">
+                        <div class="img-square-wrapper">
+                            <!-- Image and pins container -->
+                            <div class="wrapper">
+                                <div class="uk-map">
+                                    <div class="map-container">
+                                        <div class="location location-uk">
+                                            <!-- Image with map -->
+                                            <img src="static/images/uk-map.png" alt="UK Map" class="map-uk" />
+                                            <!-- Pins -->
+                                            <div class="location-pins">
+                                                <div class="pin pin-one" data-location-pin="item-1"><span>England - 55.9 Million</span></div>
+                                                <div class="pin pin-two" data-location-pin="item-2"><span>Wales - 3 Million</span></div>
+                                                <div class="pin pin-three" data-location-pin="item-3"><span>Scotland - 5.4 Million</span></div>
+                                                <div class="pin pin-four" data-location-pin="item-4"><span>Northern Ireland - 1.9 Million</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Text content -->
+                            <h4 class="card-title">Population Distribution in the UK</h4>
+                            <p class="card-text">Explore the population distribution across different regions of the United Kingdom.</p>
+                            <p>
+                                The UK is ethnically diverse with a multi-cultural and
+                                multi-faith society. Some areas of the UK are more
+                                diverse than others, especially larger cities. In 2011,
+                                over 14% of the population identified themselves as
+                                being part of an ethnic group other than white. This
+                                includes mixed ethnic groups, Asian, African and Arab
+                                people<br></br> </p><p class = "small-text">Hover over the map to explore the population distribution</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div class = "card">
+    <div class = "card-horizontal2">
+        <div class="card-body">
+                        <h4 class="card-title">Language</h4>
+                        <p class="card-text">The main language in the UK is English. </p>
+        </p>The UK uses
+                            British spelling, which differs slightly to American English.
+                            There are many different regional accents across the UK.
+                            Welsh is also widely used and taught in Wales and
+                            there are other recognised regional languages such
+                            as Scots Gaelic, Scots, Irish/Gaelic and Cornish.</p>
+                    </div>
+        <div class="img-square-wrapper">
+            <img class="lang" src="static/images/lang.gif" alt="Card image cap">
+        </div>
+    </div>
+</div>
+
+<div class = "text-container">
+<h1>UK Values</h1>
+
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="static/images/vote.png" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc"><span class ="bold">Democracy:</span> Everyone is aware of their rights and responsabilities</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="static/images/law.png" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc"><span class ="bold">Rule of Law:</span> The need for rules to make a happy, safe and secure enviroment to leave and work</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="static/images/respect.png" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc"><span class ="bold">Respect & Tolerance:</span> Respecting the values, ideas and beliefs of others, not imposing our own.
+
+    </div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+      <img src="static/images/individual.png" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc"><span class ="bold">Individual Liberty:</span> Protection of your rights and the right of others you work with.
+
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+</div>
+
+
+<div class="card-container">
+  <div class="row">
+    <!-- card1 -->
+     <div class="card-circle">
+        <div class="card-icon">
+          <i class="fas fa-pound-sign"></i>
+        </div>
+        <div class="card-body">
+           <h5 class="card-title">Money</h5>
+           <p class="card-text">The currency in the UK is the Pound Sterling (£).<br> </br>The notes in circulation are: £5, £10, £20 and £50.
+           </p>
+         
+        </div>
+     </div>
+     <!-- card2 -->
+     <div class="card-circle">
+        <div class="card-icon">
+<i class="fas fa-clock"></i>         </div>
+        <div class="card-body">
+           <h5 class="card-title">Timezone</h5>
+           <p class="card-text">The UK time zone is Greenwich Mean Time (GMT)
+            during winter months and GMT +1 (also called British
+            Summer Time or BST) during the summer.
+          <div id="uk-time"></div>
+</p>
+        
+        </div>
+     </div>
+     <!-- card3 -->
+     <div class="card-circle ">
+        <div class="card-icon">
+           <i class="fas fa-bus"></i>
+        </div>
+        <div class="card-body">
+           <h5 class="card-title">Public Transport</h5>
+           <p class="card-text">There is an extensive train and bus network across the
+            country.
+           </br> </br>To use public transport, you usually have to buy a ticket
+            before travelling.</p>
+         
+        </div>
+     </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footerContainer">
+      <div class="socialIcons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+              <li><a href="">Introduction</a></li>
+              <li><a href="">Claiming Refugee</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li>  <a
+                href="javascript:void(
+                  window.open(
+                    'https://form.jotform.com/241116386468360',
+                    'blank',
+                    'scrollbars=yes,
+                    toolbar=no,
+                    width=700,
+                    height=500'
+                  )
+                )
+              ">
+                Feedback Form
+              </a></li>
+              <li><a href = "">Accessibility</a></li>
+              <li><a href = "">Site Map</a></li>
+
+
+
+  
+          </ul>
+      </div>
+      
+  </div>
+ 
+</footer>
+
+<script>
+  function displayUKTime() {
+      var ukTimeElement = document.getElementById('uk-time');
+      var now = new Date();
+      var options = {
+          timeZone: 'Europe/London', // UK timezone
+          hour: 'numeric',
+          minute: 'numeric',
+          second: 'numeric',
+          hour12: false // 24-hour format
+      };
+      var ukTime = now.toLocaleString('en-GB', options);
+      ukTimeElement.textContent = 'Current time in UK: ' + ukTime;
+  }
+  
+  // Call the function to display UK time when the page loads
+  displayUKTime();
+  
+  // Update the time every second
+  setInterval(displayUKTime, 1000);
+  </script>
+  
+  
+  
+  
+
+</body>
+</html>

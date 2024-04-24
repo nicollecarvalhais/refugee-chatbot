@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://db.onlinewebfonts.com/c/ec11ddc9fa834d65ab94debb6af73080?family=Zing+Rust+Base" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/brightwall" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  
+                
+  <title>Chatbot</title>
+ </head>
+ <body>
+
+  <!--Nav Bar ul List-->
+  <nav class="navbar">
+   <ul class="nav-links">
+    <li><a href="/#">Home</a></li>
+    <li><a href="/near_you">Introduction</a></li>
+    <li><a href="/steps">Claiming Refugee Status</a></li>
+    <li><div id="google_translate_element"></div></li>
+   </ul>
+
+   <!-- Translate page to be positioned on nav bar-->
+   <script type="text/javascript">
+    function googleTranslateElementInit() {
+     new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+     }, 'google_translate_element');
+    }
+   </script>
+   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </nav>
+
+  <!--Header class = containing logo and video-->
+  <div class="header">
+   <div class="logo-container">
+    <a href = "/#"> <img src="static/images/logo2.png" alt="Animated GIF" id="logo"></a>
+   </div>
+
+   <!--Class video-container where main page video can be edited-->
+   <section class="showcase">
+    <div class="video-container">
+     <video src="static/images/Cover.mp4" autoplay muted loop></video>
+    </div>
+    
+
+  </div>
+  </div>
+  <div class="text_container">
+  </div>
+
+  <!-- CHATBOT -->
+  <div class="container">
+   <div class="chatbox">
+
+    <!--Chatbot Support div has the properites: Header, image-header, content-header, messages and predefined questions-->
+    <div class="chatbox__support">
+
+     <!--Chatbot Header displays the avatar, bot description-->
+     <div class="chatbox__header">
+      <div class="chatbox__image--header">
+       <img src="static/images/Avatar.png" alt="image">
+      </div>
+
+      <div class="chatbox__content--header">
+       <h4 class="chatbox__heading--header">Chat support</h4>
+       <p class="chatbox__description--header">
+        <b>Hello, I'm Aurora.</b>
+        <br> Named after the Roman goddess of dawn, I symbolize new beginnings and enlightenment <br>Ask me anything!
+       </p>
+      </div>
+     </div>
+     <!--Chatbot messages is where the messages are positioned-->
+     <div class="chatbox__messages">
+      <div></div>
+     </div>
+     <!-- Typing indicator -->
+     <div class="typing-indicator" style="display: none;">
+      <span></span>
+      <span></span>
+      <span></span>
+     </div>
+     <!--Button to display predefined questions, so users can select it instead of writing-->
+     <div class="predefined-questions"> {% for question in predefined_questions %} <button class="menu__button">{{ question }}</button> {% endfor %} </div>
+     <!--Chatbot footer is everything displayed below the messages, in this case only a placeholder where users can write questoons and a send button -->
+     <div class="chatbox__footer">
+      <input type="text" placeholder="Write a message...">
+      <button class="chatbox__send--footer send__button">Send</button>
+     </div>
+    </div>
+    <div class="chatbox__button">
+     <button>
+      <img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" />
+     </button>
+    </div>
+   </div>
+  </div>
+  <script>
+   $SCRIPT_ROOT = {
+    {
+     request.script_root | tojson
+    }
+   };
+  </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+  <!-- CARDSSS -->
+
+  <div class="card-content">
+    <h1 class="heading"></h1>
+    <div class="description">
+      <h1>Every Women Deserves:</h1>
+      <p>Select the button to ask a question. (Make sure the chatbot is open)</p></div>
+    <a class="card">
+      <div class="front" style="background-image: url(static/images/1.png)">
+        <p>Access to Health.</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>Every Refugee has the right to access the health services
+                  provided by the National Health Service (NHS) </p>
+                <p>You can access the following for free: General Practitioners (GP), Hospitals, Maternity Services
+                </p>
+               
+                <button class="button" onclick="sendMessageToChatbot('What is a GP?')">What is a GP?</button></div>
+        </div>
+    </a>
+    <a class="card" href="#!">
+      <div class="front" style="background-image: url(static/images/2.png)">
+        <p>Employment</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>You have the right to work as soon as you
+                  have been granted refugee status in the UK</p>
+                <p>Finding a job will not only increase your income but
+                  will help you settle into your new life.</p>
+                <button class="button" onclick="sendMessageToChatbot('How can I find a job?')">How can I find a job?</button></div>
+
+        </div>
+    </a>
+    <a class="card" href="#!">
+      <div class="front" style="background-image: url(static/images/3.png)">
+        <p>Access your Benefits</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>Benefits are monetary payments from the government to
+                  help you and your family live in the UK.</p>
+                <p>You should do this straighaway</p>
+                <button class="button" onclick="sendMessageToChatbot('How do I apply for benefits?')">How to Apply?</button></div>
+
+        </div>
+    </a>
+  
+  
+    <a class="card" href="#!">
+      <div class="front" style="background-image: url(static/images/4.png)">
+        <p>Safety</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>You and your family should always feel safe</p>
+                <p>You can contact the police on 999 for emergency or 101 foe less urgent situations.</p>
+                <button class="button" onclick="sendMessageToChatbot('UK Emergency Numbers')">What are the Emergency Numbers?</button></div>
+                      </div>
+    </a>
+    <a class="card" href="#!">
+      <div class="front" style="background-image: url(static/images/5.png)">
+        <p>Housing</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>You have the right to have somewhere to live.</p>
+                <p>There are two types of housing in the UK: Private housing or Social Housing.</p>
+                <button class="button" onclick="sendMessageToChatbot('What is the difference between privately rented housing and social housing?')">What is the difference?</button></div>
+        </div>
+    </a>
+    <a class="card" href="#!">
+      <div class="front" style="background-image: url(static/images/6.png)">
+        <p>Access to Education</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>Education is important in the UK and there is a strong
+                  culture of lifelong learning.</p>
+                <p>Adult learning is strongly encouraged and many
+                  different courses are available</p>
+                <button class="button" onclick="sendMessageToChatbot('What is Adult Learning?')">What is Adult Learning?</button></div>
+        </div>
+    </a>
+  
+   <a class="card" href="#!">
+    <div class="front" style="background-image: url(static/images/7.png)">
+      <p>Legal Rights</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>Every person in the UK has the same basic human
+                  rights and freedoms, which are protected in law. </p>
+                <button class="button" onclick="sendMessageToChatbot('What are my rights in the UK?')">What are my rights?</button></div>
+        </div>
+    </a>
+  
+   <a class="card" href="#!">
+    <div class="front" style="background-image: url(static/images/8.png)">
+      <p>Empowerment</p>
+        </div>
+        <div class="back">
+            <div>
+                <p>You should feel empowered becasuse your voice, choices and autonomy are fundamental human rights.</p>
+
+                <button class="button" onclick="sendMessageToChatbot('How can I build confidence and self-esteem after experiencing displacement?')">How can I build confidence?</button></div>
+        </div>
+    </a>
+</div>
+
+
+<footer>
+  <div class="footerContainer">
+      <div class="socialIcons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+              <li><a href="">Introduction</a></li>
+              <li><a href="">Claiming Refugee</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li>  <a
+                href="javascript:void(
+                  window.open(
+                    'https://form.jotform.com/241116386468360',
+                    'blank',
+                    'scrollbars=yes,
+                    toolbar=no,
+                    width=700,
+                    height=500'
+                  )
+                )
+              ">
+                Feedback Form
+              </a></li>
+              <li><a href = "">Accessibility</a></li>
+              <li><a href = "">Site Map</a></li>
+
+
+
+  
+          </ul>
+      </div>
+      
+  </div>
+ 
+</footer>
+
+
+
+
+
+
+</body>
+</html>

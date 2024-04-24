@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='steps_style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Step</title>
+</head>
+<body>
+
+  <!--Nav Bar ul List-->
+<nav class="navbar">
+  <ul class="nav-links">
+      <li><a href="/#">Home</a></li>
+      <li><a href="/near_you">Introduction</a></li>
+      <li><a href="/steps">Claiming Refugee Status</a></li>
+      <li><div id="google_translate_element"></div></li>
+  </ul>
+
+    <!-- Translate page to be positioned on nav bar-->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+          }, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</nav>
+
+<!--Header containing logo and video-->
+<div class="header">
+  <div class="logo-container">
+    <a href = "/#"> <img src="static/images/logo2.png" alt="Animated GIF" id="logo"></a>
+  </div>
+</div>
+
+<main>
+  
+      
+      <section class="timeline">
+        <ul>
+          <li>
+            <div>
+              <time>Step 1</time> Enter the UK
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Claim Asylum </time> You claim asylum via the UK Home Office, the government department that handles asylum and immigration claims, as well as enforcing borders. This is either done when you enter the UK at the port or through a phone call.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Screening Interview</time> This is the first interview that takes place after you have claimed asylum. You will be asked to say briefly why you have come to the UK – why you are claiming asylum
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Dispersal</time> If you do not have anywhere to live and you have no money to support yourself, you need to tell the Home Office this when you claim asylum. At this point of the legal process, you will be entitled to “asylum support” – housing and a small amount of money
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Substantive Interview</time>This is when the Home Office interviewer will ask you in detail about your reasons for claiming asylum. The interview may last several hours and you will be asked lots of questions. You may be asked the same questions several times in different ways. You can find out more about this interview <a href = "https://righttoremain.org.uk/preparing-for-a-video-call-asylum-substantive-interview/">here</a>.
+
+
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Home Office Decision</time> The Home Office may take months, or even over a year to provide you with a decision.
+
+            </br>If the Home Office make a positive decision on your asylum claim, you will be granted leave to remain in the UK. You will be granted Refugee Status.
+          </br> If your asylum application is refused by the Home Office, you are likely to have the right to appeal that decision
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Submit Appeal</time> If you have the right to appeal, the First-tier Tribunal is the court where a judge will hear and decide on your asylum appeal, at which you say the Home Office was wrong to refuse your asylum claim. Hearings are in public, so when you have your hearing there may be members of the public in the room too.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Possible Outcomes </time> <br>Positive Decision</br>Negative Decision</br>Appeal Rights Exhausted</br>Risk of Detention</br>Risk of Removal
+
+              
+            </div>
+          </li>
+        </ul>
+      </section>
+     
+      <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="footerNav">
+              <ul>
+                    <li><a href="">Introduction</a></li>
+                    <li><a href="">Claiming Refugee</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li>  <a
+                      href="javascript:void(
+                        window.open(
+                          'https://form.jotform.com/241116386468360',
+                          'blank',
+                          'scrollbars=yes,
+                          toolbar=no,
+                          width=700,
+                          height=500'
+                        )
+                      )
+                    ">
+                      Feedback Form
+                    </a></li>
+                    <li><a href = "">Accessibility</a></li>
+                    <li><a href = "">Site Map</a></li>
+      
+      
+      
+        
+                </ul>
+            </div>
+            
+        </div>
+       
+      </footer>
+
+</footer>
+<script>
+    (function () {
+        "use strict";
+      
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
+      
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+          var rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+      
+        function callbackFunc() {
+          for (var i = 0; i < items.length; i++) {
+            if (isElementInViewport(items[i])) {
+              items[i].classList.add("in-view");
+            }
+          }
+        }
+      
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+      })();
+    </script>      
