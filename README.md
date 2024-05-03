@@ -1,52 +1,31 @@
-# Chatbot Deployment with Flask and JavaScript
+# A Python Chatbot to Empower Refugee Women
 
-In this tutorial we deploy the chatbot I created in [this](https://github.com/python-engineer/pytorch-chatbot) tutorial with Flask and JavaScript.
+## Description
+This Python chatbot is specifically designed to empower refugee women by providing information on essential resources such as shelters, healthcare services, legal assistance, education opportunities, and community support networks. The chatbot utilizes AI to predict an answer and display to the user.
 
-This gives 2 deployment options:
-- Deploy within Flask app with jinja2 template
-- Serve only the Flask prediction API. The used html and javascript files can be included in any Frontend application (with only a slight modification) and can run completely separate from the Flask App then.
 
-## Initial Setup:
-This repo currently contains the starter files.
+## Installation
+1. Clone the repository download the source code:
+    ```
+    git clone https://github.com/nicollecarvalhais/refugee-women-chatbot.git
+    ```
+2. Install the required Python dependencies listed in the `requirements.txt` file.
 
-Clone repo and create a virtual environment
-```
-$ git clone https://github.com/python-engineer/chatbot-deployment.git
-$ cd chatbot-deployment
-$ python3 -m venv venv
-$ . venv/bin/activate
-```
-Install dependencies
-```
-$ (venv) pip install Flask torch torchvision nltk
-```
-Install nltk package
-```
-$ (venv) python
->>> import nltk
->>> nltk.download('punkt')
-```
-Modify `intents.json` with different intents and responses for your Chatbot
+    ```
+    pip install -r requirements.txt
+    ```
+3. Configure the chatbot settings in `app.py`.
 
-Run
-```
-$ (venv) python train.py
-```
-This will dump data.pth file. And then run
-the following command to test it in the console.
-```
-$ (venv) python chat.py
-```
+## Usage
+1. 1. Run `train.py` to train the chatbot model. This step is necessary before running the chatbot to ensure it provides accurate responses.
 
-Now for deployment follow my tutorial to implement `app.py` and `app.js`.
+2.  Run `app.py` to open the website and start the chatbot.
 
-## Watch the Tutorial
-[![Alt text](https://img.youtube.com/vi/a37BL0stIuM/hqdefault.jpg)](https://youtu.be/a37BL0stIuM)  
-[https://youtu.be/a37BL0stIuM](https://youtu.be/a37BL0stIuM)
+## License
+This project is licensed under the MIT License
 
-## Note
-In the video we implement the first approach using jinja2 templates within our Flask app. Only slight modifications are needed to run the frontend separately. I put the final frontend code for a standalone frontend application in the [standalone-frontend](/standalone-frontend) folder.
+## Credits
+- Developed by [Nicolle Oliveira](https://github.com/nicollecarvalhais)
 
-## Credits:
-This repo was used for the frontend code:
-https://github.com/hitchcliff/front-end-chatjs
+## Contact Information
+For questions, feedback, or support, please contact me at [21380920@stu.mmu.ac.uk](mailto:21380920@stu.mmu.ac.uk).

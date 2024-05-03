@@ -60,7 +60,6 @@
         {
             "tag": "education",
             "patterns": [
-                "How can I access education opportunities?",
                 "Where do I start learning?",
                 "Are there free online courses?",
                 "What resources are available for learning?",
@@ -71,8 +70,21 @@
                 "Start learning by checking out resources at <a href ='https://gmesol.org/community-organisations-and-training-providers/'>ESOL Courses in Manchester</a>",
                 "There are free online courses available at <a href = 'https://www.esolcourses.com/'>ESOL Courses Online</a> and <a href= 'https://mrsn.org.uk/learn-english-online/'>MRSN - Learn English Online</a>"
             ],
+            "predefined_question": null
+        },
+
+        {
+            "tag": "education-2",
+            "patterns": [
+                "How can I access education?"
+            ],
+            "responses": [
+                "Start learning by checking out resources at <a href ='https://gmesol.org/community-organisations-and-training-providers/'>ESOL Courses in Manchester</a>",
+                "There are free online courses available at <a href = 'https://www.esolcourses.com/'>ESOL Courses Online</a> and <a href= 'https://mrsn.org.uk/learn-english-online/'>MRSN - Learn English Online</a>"
+            ],
             "predefined_question": "How can I access education opportunities?"
         },
+
 
         {
             "tag": "legal_aid",

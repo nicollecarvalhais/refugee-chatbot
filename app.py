@@ -29,6 +29,10 @@ def near_you():
 def steps():
     return render_template("steps.html")
 
+@app.route("/policy")
+def policy():
+    return render_template("policy.html")
+
 # Define API route for chat interaction
 @app.route("/predict", methods=["POST"])
 def predict():

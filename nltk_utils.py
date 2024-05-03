@@ -1,18 +1,23 @@
+# This file contains utility functions for processing the chatbot text data. 
+# It uses NLTK and has three functions:
+#tokenize (break into words), stem (reduce words to root form), and create a bag of words (vector representation of words in a sentence).
+
+# Import the necessary libraries
 import numpy as np
 import nltk
-# nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
 
-
+#Define a function to tokenize the sentence as input
 def tokenize(sentence):
     """
     split sentence into array of words/tokens
     a token can be a word or punctuation character, or number
     """
-    return nltk.word_tokenize(sentence)
+    return nltk.word_tokenize(sentence) #return the tokenized sentence splitted into words
 
 
+# define a function to stem the words
 def stem(word):
     """
     stemming = find the root form of the word
@@ -21,9 +26,9 @@ def stem(word):
     words = [stem(w) for w in words]
     -> ["organ", "organ", "organ"]
     """
-    return stemmer.stem(word.lower())
+    return stemmer.stem(word.lower()) #return the root form of the word
 
-
+# define a function to convert the sentence into a bag of wordsx
 def bag_of_words(tokenized_sentence, words):
     """
     return bag of words array:
