@@ -7,7 +7,7 @@ This Python chatbot is specifically designed to empower refugee women by providi
 ## Installation
 1. Clone the repository download the source code:
     ```
-    git clone https://github.com/nicollecarvalhais/refugee-women-chatbot.git
+    git clone https://github.com/nicollecarvalhais/refugee-chatbot.git
     ```
 2. Install the required Python dependencies listed in the `requirements.txt` file.
 
