@@ -33,6 +33,10 @@ def steps():
 def policy():
     return render_template("policy.html")
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 # Define API route for chat interaction
 @app.route("/predict", methods=["POST"])
 def predict():
